@@ -1,0 +1,27 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+<a class="navbar-brand">Registros</a>
+<form class="form-inline">
+<input class="form-control mr-sm-2" type="search" placeholder="Search"
+aria-label="Search" name="state">
+<button class="btn btn-outline-success my-2 my-sm-0"
+type="submit">Search</button>
+</form>
+</nav>
+<table class="table">
+<tr>
+<th>Nombre</th>
+<th>Descripcion</th>
+<th>Fecha de Ingreso</th>
+<th>Fecha de Entrega</th>
+<th>Estado</th>
+</tr>
+<% @posts.each do |post| %>
+<tr>
+<td><%= post.name %> </td>
+<td><%= post.description %> </td>
+<td><%= post.date_in %> </td>
+<td><%= post.date_out %> </td>
+<td><%= post.state %> </td>
+</tr>
+<% end %>
+</table>
